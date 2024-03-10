@@ -1,0 +1,48 @@
+---
+import Header from "../sections/Header.astro"
+import Footer from "../sections/Footer.astro"
+import {ViewTransitions} from "astro:transitions"
+import Hero from "../sections/Hero.astro";
+
+interface Props {
+    title: string
+    description: string
+}
+
+const {description, title} = Astro.props
+---
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="description" content={description}/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <meta name="generator" content={Astro.generator}/>
+    <title>{title}</title>
+    <ViewTransitions/>
+</head>
+<body class="relative text-black dark:text-white">
+<div
+        class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-gray-50 dark:bg-gray-950
+      bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(119,176,198,0.5),rgba(255,255,255,0.9))]
+      dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(119,176,198,0.3),rgba(255,255,255,0))] "
+>
+</div>
+<Header/>
+<slot/>
+<Footer/>
+
+<style is:global>
+    :root {
+        color-scheme: light dark;
+        --color-primary: #77b0c680;
+        --color-secondary: #C68D77;
+    }
+
+    * {
+        caret-color: transparent;
+    }
+</style>
+</body>
+</html>
