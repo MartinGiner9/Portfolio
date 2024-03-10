@@ -60,7 +60,7 @@ const navItems = [
 
 </header>
 
-<script define:vars={{navItems}}>
+<script define:vars={{navItems}} is:inline>
     window.document.addEventListener("DOMContentLoaded", function () {
         const links = document.querySelectorAll(".link");
         links.forEach(function (link) {
