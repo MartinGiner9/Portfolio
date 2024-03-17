@@ -2,7 +2,6 @@
 import Header from "../sections/Header.astro"
 import Footer from "../sections/Footer.astro"
 import {ViewTransitions} from "astro:transitions"
-import Hero from "../sections/Hero.astro";
 
 interface Props {
     title: string
@@ -32,7 +31,6 @@ const {description, title} = Astro.props
 <Header/>
 <slot/>
 <Footer/>
-
 <style is:global>
     :root {
         color-scheme: light dark;
