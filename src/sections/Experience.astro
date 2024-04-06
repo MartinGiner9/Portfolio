@@ -18,14 +18,12 @@ const EXPERIENCIE = [
     },
 ]
 ---
-<section>
-    <ul>
-        {
-            EXPERIENCIE.map((item) => (
-                    <li>
-                        <ExperienceItem {...item}/>
-                    </li>
-            ))
-        }
-    </ul>
-</section>
+<ul class="m-3 border-l-2 border-purple-800">
+    {
+        EXPERIENCIE.map((item) => (
+                <li>
+                    <ExperienceItem {...item}/>
+                </li>
+        ))
+    }
+</ul>
