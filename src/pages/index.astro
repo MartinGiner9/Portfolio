@@ -10,7 +10,7 @@ import Briefcase from "../icons/Briefcase.astro";
 <Layout
         title="Porfolio de Martín Giner Navarro - Desarrollador y Programador Web con 1 año de experiencia"
         description="Contrata a Martín para crear tu aplicación web o móvil. Desarrollador Web. Especializado en crear aplicaciones.">
-    <Section id="Hero" class="px-3 md:px-0 py-12 md:py-36 scroll-m-20 w-full mx-auto container lg:max-w-5xl bg-martin">
+    <Section id="Hero" class="bg-hero px-3 md:px-0 py-12 md:py-36 scroll-m-20 w-full mx-auto container lg:max-w-5xl">
         <Hero/>
     </Section>
     <Section id="Experience" class="px-3 md:px-0 py-12 md:py-36 scroll-m-20 w-full mx-auto container lg:max-w-5xl">
@@ -23,25 +23,26 @@ import Briefcase from "../icons/Briefcase.astro";
 </Layout>
 
 <style is:global>
-    .bg-martin {
+
+    .bg-hero {
         background-image: url('/MartinGiner.webp');
         background-position: right;
         background-repeat: no-repeat;
         background-size: contain;
+        mask-image: linear-gradient(black 75%, transparent 92%);
     }
 
     @media (max-width: 640px) {
-        .bg-martin {
+        .bg-hero {
             background-size: 235px;
             background-position-x: 69vw;
         }
     }
 
     @media (max-width: 516px) {
-        .bg-martin {
+        .bg-hero {
             background-size: 235px;
             background-position-x: 60vw;
         }
     }
-
 </style>
