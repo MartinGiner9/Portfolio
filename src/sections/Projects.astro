@@ -1,0 +1,50 @@
+---
+import Angular from "../icons/Angular.astro";
+import Symfony from "../icons/Symfony.astro";
+import ZK from "../icons/ZK.astro";
+const TAGS = {
+    ANGULAR: {
+        name: "Angular",
+        class: "bg-red text-black",
+        icon: Angular,
+    },
+    SYMFONY: {
+        name: "Symfony CSS",
+        class: "bg-white text-black",
+        icon: Symfony,
+    },
+    ZK: {
+        name: "ZK",
+        class: "bg-white text-black",
+        icon: ZK,
+    },
+
+
+}
+const PROJECTS = [
+    {
+        title: "Escuela de hostelería",
+        description:
+            "Web para la escuela de hostelería de la ciudad de Múrcia. Desarrollada con Angular.js y Symfony. Este proyecto se llevo a cabo para el proyecto final de grado. En el cual se integro una pasarela de pago para poder realizar reservas mediante tarjeta de credito con Stripe, una zona de administración privada para poder gestionar los dias los cuales se pueden reservas las horas las cuales se podrian realizar las reservas, los clientes y las reservas realizadas dando tambien la opcion de si una reserva queria ser cancelada y se habia pagado con tarjeta realizar la devolucion del dinero.",
+        link: "https://proyectohosteleria.fun/",
+        github: "",
+        image: "",
+        tags: [TAGS.ANGULAR, TAGS.SYMFONY],
+    }
+]
+---
+{
+    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    <h1>{title}</h1>
+    <p>{description}</p>
+    <div>
+        {tags.map((tag) => (
+                <ul>
+                    {
+                        <tag.icon/>
+                    }
+                </ul>
+        ))}
+    </div>
+        ))
+    }
