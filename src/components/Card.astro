@@ -4,13 +4,13 @@ import Github from "../icons/Github.astro";
 import Hyperlink from "../icons/Hyperlink.astro";
 interface Props {
     title: string
-    description: string
-    shortDescription: string
+    description?: string
+    shortDescription?: string
     link?: string
     image?: string
     altImage?: string
     github?: string
-    tags: string[]
+    tags?: any[]
 }
 
 const {

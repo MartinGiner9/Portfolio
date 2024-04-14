@@ -41,7 +41,9 @@ const PROJECTS = [
         PROJECTS.map((item) =>
             (
                     <li>
-                        <Card {...item}/>
+                        <Card title={item.title} description={item.description} link={item.link} image={item.image}
+                              altImage={item.altImage} github={item.github} tags={item.tags}
+                              shortDescription={item.shortDescription}/>
                     </li>
             )
         )
