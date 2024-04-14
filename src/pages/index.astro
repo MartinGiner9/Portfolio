@@ -5,6 +5,8 @@ import Hero from "../sections/Hero.astro";
 import Experience from "../sections/Experience.astro";
 import Section from "../components/Section.astro";
 import Briefcase from "../icons/Briefcase.astro";
+import Projects from "../sections/Projects.astro";
+import Code from "../icons/Code.astro";
 ---
 
 <Layout
@@ -13,12 +15,19 @@ import Briefcase from "../icons/Briefcase.astro";
     <Section id="Hero" class="pl-3 md:pl-0 py-12 md:py-36 scroll-m-20 w-full mx-auto lg:max-w-5xl">
         <Hero/>
     </Section>
-    <Section id="experience" class="px-3 md:px-0 pb-4 md:pb-24 scroll-m-20 w-full mx-auto lg:max-w-5xl">
+    <Section id="experiencia" class="px-3 md:px-0 pb-4 md:pb-24 scroll-m-20 w-full mx-auto lg:max-w-5xl">
         <h2 class="mb-6 text-3xl font-semibold gap-x-3">
             <Briefcase class="w-8 h-8 inline-block mb-2"/>
             Experiencia laboral
         </h2>
         <Experience/>
+    </Section>
+    <Section id="proyectos" class="px-3 md:px-0 pb-4 md:pb-24 scroll-m-20 w-full mx-auto lg:max-w-5xl">
+        <h2 class="mb-6 text-3xl font-semibold gap-x-3">
+            <Code class="w-8 h-8 inline-block mb-2"/>
+            Proyectos
+        </h2>
+        <Projects/>
     </Section>
 </Layout>
 
