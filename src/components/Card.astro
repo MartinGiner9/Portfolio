@@ -10,7 +10,7 @@ interface Props {
     image?: string
     altImage?: string
     github?: string
-    tags: string[] | string
+    tags: string[]
 }
 
 const {
@@ -26,7 +26,7 @@ const {
         <div>
             <ul class="flex flex-row mb-2 gap-x-2">
 
-                {tags && (tags.map((tag) => (
+                {tags && (tags.map((tag: any) => (
                         <li>
                           <span
                                   class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 items-center `}
