@@ -7,6 +7,7 @@ import Section from "../components/Section.astro";
 import Briefcase from "../icons/Briefcase.astro";
 import Projects from "../sections/Projects.astro";
 import Code from "../icons/Code.astro";
+import About from "../sections/About.astro";
 ---
 
 <Layout
@@ -28,6 +29,13 @@ import Code from "../icons/Code.astro";
             Proyectos
         </h2>
         <Projects/>
+    </Section>
+    <Section id="sobre-mi" class="px-3 md:px-0 pb-4 md:pb-24 scroll-m-20 w-full mx-auto lg:max-w-5xl">
+        <h2 class="mb-6 text-3xl font-semibold gap-x-3">
+            <Briefcase class="w-8 h-8 inline-block mb-2"/>
+            Sobre mí
+        </h2>
+        <About/>
     </Section>
 </Layout>
 
